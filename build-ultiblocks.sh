@@ -3,7 +3,7 @@
 i_or_ci(){
 if [[-f package-lock.json]]; then
 npm ci
-else; then
+else
 npm i
 fi
 }
