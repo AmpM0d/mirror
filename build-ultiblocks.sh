@@ -1,3 +1,11 @@
+i_or_ci(){
+if [[-f package-lock.json]]; then
+npm ci
+else; then
+npm i
+fi
+}
+
 echo "::group::Cloning repositories"
 git clone https://github.com/AmpM0d/scratch-gui --depth=1
 git clone https://github.com/AmpM0d/scratch-vm --depth=1
@@ -6,17 +14,17 @@ echo "::endgroup::"
 echo "::group::Build scratch-blocks"
 cd scratch-blocks
 git branch developBuilds
-npm ci
+i_or_ci
 cd ..
 echo "::endgroup::"
 echo "::group::Build scratch-vm"
 cd scratch-vm
-npm ci
+i_or_ci
 cd ..
 echo "::endgroup::"
 echo "::group::Build scratch-gui"
 cd scratch-gui
-npm ci
+i_or_ci
 npm link ../scratch-vm
 npm link ../scratch-blocks
 npm run build
