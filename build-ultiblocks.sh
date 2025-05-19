@@ -29,5 +29,5 @@ cd scratch-gui
 i_or_ci
 npm link ../scratch-vm
 npm link ../scratch-blocks
-npm run build
+npm run ci-build
 echo "::endgroup::"
