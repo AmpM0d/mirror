@@ -9,9 +9,9 @@ fi
 }
 
 echo "::group::Cloning repositories"
-git clone https://github.com/AmpM0d/scratch-gui --depth=1
-git clone https://github.com/AmpM0d/scratch-vm --depth=1
-git clone https://github.com/AmpM0d/scratch-blocks --depth=1
+git clone https://codeberg.org/ampmod/scratch-gui --depth=1
+git clone https://codeberg.org/ampmod/scratch-vm --depth=1
+git clone https://codeberg.org/ampmod/scratch-blocks --depth=1
 echo "::endgroup::"
 echo "::group::Build scratch-blocks"
 cd scratch-blocks
